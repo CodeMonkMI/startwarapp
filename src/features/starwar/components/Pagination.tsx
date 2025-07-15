@@ -38,7 +38,7 @@ export const CharacterPagination: React.FC<{
           {next && (
             <PaginationItem>
               <Button variant={"ghost"}>
-                <Link href={`/?page=${current - 1}`}>Next</Link>
+                <Link href={`/?page=${current + 1}`}>Next</Link>
               </Button>
             </PaginationItem>
           )}
