@@ -1,0 +1,1 @@
+export { StartWarCharacter } from "./StartWarCharacter";
