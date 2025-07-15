@@ -1,5 +1,5 @@
 import { Skeleton } from "@/components/ui/skeleton";
-import { CharacterGridSkeleton } from "@/features/starwar/components/skeletons/";
+import { CharacterGridSkeleton } from "@/features/starwar/components/skeletons";
 
 export default function Loading() {
   // Or a custom loading skeleton component
