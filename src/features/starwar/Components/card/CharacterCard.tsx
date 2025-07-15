@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Eye, Palette, Ruler, User2, Weight } from "lucide-react";
 import { Suspense } from "react";
-import HomeWorld from "./HomeWorld";
+import HomeWorld from "../HomeWorld";
 
 type CharacterCardProps = {
   name: string;

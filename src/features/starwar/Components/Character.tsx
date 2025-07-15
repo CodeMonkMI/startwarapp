@@ -1,6 +1,6 @@
 import { use } from "react";
 import { fetchPeople } from "../apis/peopleApi";
-import { CharacterCard } from "./CharacterCard";
+import { CharacterCard } from "./card";
 
 export default function Character({ id }: { id: string }) {
   const {
