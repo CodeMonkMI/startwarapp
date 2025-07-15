@@ -1,15 +1,16 @@
-import { Suspense } from "react";
+import { SearchParamType } from "@/app/type";
+import { Suspense, use } from "react";
 import { fetchPeoples } from "./apis/peopleApi";
 import Character from "./Components/Character";
 import CharacterPagination from "./Components/Pagination";
 import { SearchBar } from "./Components/SearchBar";
 
 export type Props = {
-  searchParams: { [key: string]: string | undefined };
+  searchParams: SearchParamType;
 };
 
-export const StartWarCharacter = async ({ searchParams }: Props) => {
-  const resolvedSearchParams = await searchParams;
+export const StartWarCharacter = ({ searchParams }: Props) => {
+  const resolvedSearchParams = use(searchParams);
   const current = resolvedSearchParams?.page
     ? parseInt(resolvedSearchParams?.page)
     : 1;
@@ -19,7 +20,7 @@ export const StartWarCharacter = async ({ searchParams }: Props) => {
     total_pages,
     previous,
     next,
-  } = await fetchPeoples({ page: current.toString(), name });
+  } = use(fetchPeoples({ page: current.toString(), name }));
   return (
     <div>
       <div className="container mx-auto">

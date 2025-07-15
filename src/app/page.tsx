@@ -1,7 +1,8 @@
 import { StartWarCharacter } from "@/features/starwar";
 import { Suspense } from "react";
+
 export type PageProps = {
-  searchParams: { [key: string]: string | undefined };
+  searchParams: Promise<{ name?: string; limit?: string; page?: string }>;
 };
 export default function Home({ searchParams }: PageProps) {
   return (
