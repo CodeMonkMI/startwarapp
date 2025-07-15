@@ -1,9 +1,10 @@
 import { SearchParamType } from "@/app/type";
 import { Suspense, use } from "react";
 import { fetchPeoples } from "./apis/peopleApi";
-import Character from "./Components/Character";
-import CharacterPagination from "./Components/Pagination";
-import { SearchBar } from "./Components/SearchBar";
+import Character from "./components/Character";
+import CharacterPagination from "./components/Pagination";
+import { SearchBar } from "./components/SearchBar";
+import { CharacterSkeleton } from "./components/skeletons";
 
 export type Props = {
   searchParams: SearchParamType;
@@ -22,7 +23,7 @@ export const StartWarCharacter = ({ searchParams }: Props) => {
     next,
   } = use(fetchPeoples({ page: current.toString(), name }));
   return (
-    <div>
+    <div className={name ? "mb-10" : ""}>
       <div className="container mx-auto">
         <div>
           <SearchBar name={name || ""} />
@@ -30,7 +31,7 @@ export const StartWarCharacter = ({ searchParams }: Props) => {
         <div className="">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
             {characters?.map((character) => (
-              <Suspense key={character.uid} fallback={<h2>Loading</h2>}>
+              <Suspense key={character.uid} fallback={<CharacterSkeleton />}>
                 <Character id={character.uid} />
               </Suspense>
             ))}

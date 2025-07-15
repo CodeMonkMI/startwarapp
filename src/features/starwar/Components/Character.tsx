@@ -10,7 +10,6 @@ export default function Character({ id }: { id: string }) {
   } = use(fetchPeople(id));
   return (
     <Card className="relative w-full mx-auto rounded-3xl border-none overflow-hidden">
-      {/* Glow Accent */}
       <span className="absolute top-0 right-0 w-24 h-24 bg-blue-300/20 rounded-full blur-3xl pointer-events-none" />
       <CardHeader className="pb-2">
         <div className="flex items-center gap-4">
