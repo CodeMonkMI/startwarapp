@@ -1,10 +1,10 @@
 import { SearchParamType } from "@/app/type";
 import { Suspense, use } from "react";
 import { fetchPeoples } from "./apis/peopleApi";
-import { Character } from "./Components/Character";
-import { CharacterPagination } from "./Components/Pagination";
-import { SearchBar } from "./Components/SearchBar";
-import { CharacterSkeleton } from "./Components/skeletons";
+import { Character } from "./components/Character";
+import { CharacterPagination } from "./components/Pagination";
+import { SearchBar } from "./components/SearchBar";
+import { CharacterSkeleton } from "./components/skeletons";
 
 export type Props = {
   searchParams: SearchParamType;
