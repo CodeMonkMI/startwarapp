@@ -1,7 +1,7 @@
 import { SearchParamType } from "@/app/type";
 import { Suspense, use } from "react";
 import { fetchPeoples } from "./apis/peopleApi";
-import Character from "./components/Character";
+import { Character } from "./components/Character";
 import { CharacterPagination } from "./components/Pagination";
 import { SearchBar } from "./components/SearchBar";
 import { CharacterSkeleton } from "./components/skeletons";
@@ -10,7 +10,7 @@ export type Props = {
   searchParams: SearchParamType;
 };
 
-export const StartWarCharacter = ({ searchParams }: Props) => {
+export const StartWarCharacter: React.FC<Props> = ({ searchParams }) => {
   const resolvedSearchParams = use(searchParams);
   const current = resolvedSearchParams?.page
     ? parseInt(resolvedSearchParams?.page)

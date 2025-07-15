@@ -6,17 +6,12 @@ import {
 } from "@/components/ui/pagination";
 import Link from "next/link";
 
-export const CharacterPagination = ({
-  total_pages,
-  previous,
-  next,
-  current = 1,
-}: {
+export const CharacterPagination: React.FC<{
   total_pages: number;
   previous: string | null;
   next: string | null;
   current: number;
-}) => {
+}> = ({ total_pages, previous, next, current = 1 }) => {
   return (
     <div>
       <Pagination>

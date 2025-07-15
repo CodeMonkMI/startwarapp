@@ -16,7 +16,7 @@ type CharacterCardProps = {
   homeworld: string;
 };
 
-export function CharacterCard(props: CharacterCardProps) {
+export const CharacterCard: React.FC<CharacterCardProps> = (props) => {
   const {
     name,
     birth_year,
@@ -93,4 +93,4 @@ export function CharacterCard(props: CharacterCardProps) {
       </CardContent>
     </Card>
   );
-}
+};

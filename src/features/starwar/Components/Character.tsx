@@ -2,7 +2,7 @@ import { use } from "react";
 import { fetchPeople } from "../apis/peopleApi";
 import { CharacterCard } from "./card";
 
-export default function Character({ id }: { id: string }) {
+export const Character: React.FC<{ id: string }> = ({ id }) => {
   const {
     result: { properties: peopleData, description },
   } = use(fetchPeople(id));
@@ -22,4 +22,4 @@ export default function Character({ id }: { id: string }) {
       />
     </>
   );
-}
+};

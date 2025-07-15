@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
-export const SearchBar = ({ name }: { name: string }) => {
+export const SearchBar: React.FC<{ name: string }> = ({ name }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -43,7 +43,6 @@ export const SearchBar = ({ name }: { name: string }) => {
           onChange={(e) => setValue(e.target.value)}
           placeholder={"Search"}
           className="border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent flex-1 text-base shadow-none"
-          disabled={false}
         />
         <Button
           type="submit"
@@ -51,7 +50,6 @@ export const SearchBar = ({ name }: { name: string }) => {
           className="rounded-full ml-2"
           variant="secondary"
           aria-label="Search"
-          disabled={false}
         >
           <Search className="w-5 h-5" />
         </Button>

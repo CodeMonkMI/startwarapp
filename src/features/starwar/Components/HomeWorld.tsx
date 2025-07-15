@@ -2,7 +2,7 @@ import { Globe2 } from "lucide-react";
 import { use } from "react";
 import { fetchPlanetByUrl } from "../apis/planteApi";
 
-const HomeWorld = ({ url }: { url: string }) => {
+const HomeWorld: React.FC<{ url: string }> = ({ url }) => {
   const {
     result: {
       properties: { name },
