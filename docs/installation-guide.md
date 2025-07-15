@@ -10,7 +10,7 @@
 Clone the repository
 
 ```sh
-git clone git@github.com:CodeMonkMI/startwarapp.git
+git clone git@github.com:CodeMonkMI/starwarapp.git
 ```
 
 Go to app directory
