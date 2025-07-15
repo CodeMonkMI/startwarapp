@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/pagination";
 import Link from "next/link";
 
-const CharacterPagination = ({
+export const CharacterPagination = ({
   total_pages,
   previous,
   next,

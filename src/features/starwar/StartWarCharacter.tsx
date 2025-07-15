@@ -2,7 +2,7 @@ import { SearchParamType } from "@/app/type";
 import { Suspense, use } from "react";
 import { fetchPeoples } from "./apis/peopleApi";
 import Character from "./components/Character";
-import CharacterPagination from "./components/Pagination";
+import { CharacterPagination } from "./components/Pagination";
 import { SearchBar } from "./components/SearchBar";
 import { CharacterSkeleton } from "./components/skeletons";
 
